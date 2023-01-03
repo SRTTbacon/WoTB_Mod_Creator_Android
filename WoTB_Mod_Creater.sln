@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoTB_Mod_Creater.Android", "WoTB_Mod_Creater.Android\WoTB_Mod_Creater.Android.csproj", "{762BDDFC-8D29-4ECE-88A3-A9C54AA0E24A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoTB_Mod_Creater", "WoTB_Mod_Creater\WoTB_Mod_Creater.csproj", "{92DB6A1D-D075-42FD-96D6-BEA558B96CFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CD57FA10-013E-4FF0-A9C0-C4229C0123FF}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{762BDDFC-8D29-4ECE-88A3-A9C54AA0E24A}.Debug|x64.ActiveCfg = Debug|x64
+		{762BDDFC-8D29-4ECE-88A3-A9C54AA0E24A}.Debug|x64.Build.0 = Debug|x64
+		{762BDDFC-8D29-4ECE-88A3-A9C54AA0E24A}.Debug|x64.Deploy.0 = Debug|x64
+		{762BDDFC-8D29-4ECE-88A3-A9C54AA0E24A}.Release|x64.ActiveCfg = Release|Any CPU
+		{762BDDFC-8D29-4ECE-88A3-A9C54AA0E24A}.Release|x64.Build.0 = Release|Any CPU
+		{762BDDFC-8D29-4ECE-88A3-A9C54AA0E24A}.Release|x64.Deploy.0 = Release|Any CPU
+		{92DB6A1D-D075-42FD-96D6-BEA558B96CFB}.Debug|x64.ActiveCfg = Debug|x64
+		{92DB6A1D-D075-42FD-96D6-BEA558B96CFB}.Debug|x64.Build.0 = Debug|x64
+		{92DB6A1D-D075-42FD-96D6-BEA558B96CFB}.Debug|x64.Deploy.0 = Debug|x64
+		{92DB6A1D-D075-42FD-96D6-BEA558B96CFB}.Release|x64.ActiveCfg = Release|Any CPU
+		{92DB6A1D-D075-42FD-96D6-BEA558B96CFB}.Release|x64.Build.0 = Release|Any CPU
+		{92DB6A1D-D075-42FD-96D6-BEA558B96CFB}.Release|x64.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C861108-F4C1-4903-BFF0-0FDB86A6DCD6}
+	EndGlobalSection
+EndGlobal
