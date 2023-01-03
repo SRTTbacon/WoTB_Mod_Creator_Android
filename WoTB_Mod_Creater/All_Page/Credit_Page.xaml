@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WoTB_Mod_Creater.All_Page.Credit_Page"
+             Title="クレジット"
+             BackgroundColor="#111216">
+
+    <ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,0,30,24" Spacing="10">
+                <Label Text="Developed by SRTTbacon" FontSize="Title" HorizontalOptions="Center" TextColor="White"/>
+                <Label Text="何かご質問、ご提案などがございましたらDiscordにてお伝えください。" FontSize="16" HorizontalOptions="Center" TextColor="White"/>
+                <Label FontSize="12" Padding="0,0,0,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Discordサーバー : " TextColor="White"/>
+                                <Span Text="https://discord.gg/bSupFP2eN3" FontAttributes="Bold" TextColor="White">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="Open_Discord_Link"/>
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label Text="" FontSize="12" HorizontalOptions="Center" TextColor="White"/>
+                <Label Text="PC版含むこのアプリは、完全無料かつ、オープンソースでの開発を行っており、自身のサーバーで運営しています。" FontSize="12" HorizontalOptions="Center" TextColor="White"/>
+                <Label Text="開発(運営)のモチベーション維持のため、寄付をしていただけると大変嬉しいです。(SRTTbacon#2395へご連絡ください！)" FontSize="12" HorizontalOptions="Center" TextColor="White"/>
+                <Label x:Name="Version_T" Text="現在のバージョン : V0.1" FontSize="17.5" HorizontalOptions="Center" TextColor="White" VerticalOptions="EndAndExpand"/>
+                <Label Text="Note: This application can only be used in Japan. Since the server exists in Japan, please do not use it overseas." FontSize="14" FontAttributes="Bold" HorizontalOptions="Center" TextColor="White" VerticalOptions="EndAndExpand"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

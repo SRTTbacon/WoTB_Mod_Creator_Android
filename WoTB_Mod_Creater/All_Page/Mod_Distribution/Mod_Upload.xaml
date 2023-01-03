@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WoTB_Mod_Creater.All_Page.Mod_Distribution.Mod_Upload"
+             xmlns:ef="clr-namespace:AiForms.Effects;assembly=AiForms.Effects"
+             BackgroundColor="#96111111"
+             Appearing="ContentPage_Appearing">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Label Text="Mod名を入力" TextColor="Aqua" FontSize="14" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.5,0.03,1,0.05"/>
+            <Entry x:Name="Mod_Name_T" Placeholder="ここに入力" PlaceholderColor="Gray" FontSize="14" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.075,0.75,0.07"/>
+            <Label Text="ファイルを追加" TextColor="Aqua" FontSize="13" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.5,0.165,1,0.05"/>
+            <ListView x:Name="Mod_File_L" ef:Border.Radius="3" ef:Border.Width="0.5" ef:Border.Color="Aqua" BackgroundColor="Transparent" SeparatorColor="Aqua" RowHeight="25" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.275,0.8,0.25">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Tapped="Mod_File_L_Tapped">
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout>
+                                    <Label Text="{Binding Name_Text}" TextColor="Aqua"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="Add_B" Text="追加" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Aqua" TextColor="Aqua" FontSize="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.832,0.4925,0.39,0.0675"/>
+            <Button x:Name="Remove_B" Text="取消" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Aqua" TextColor="Aqua" FontSize="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.17,0.4925,0.39,0.0675"/>
+            <Label Text="Modの説明" TextColor="Aqua" FontSize="13" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.775,0.57,0.25,0.05"/>
+            <Editor x:Name="Explanation_T" TextColor="Aqua" FontSize="12" BackgroundColor="Transparent" ef:Border.Color="Aqua" ef:Border.Radius="3" ef:Border.Width="0.5" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.95,0.74,0.55,0.2"/>
+            <Label Text="BGMModに設定" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="White" FontSize="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.08,0.625,0.4,0.06">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnBGMModClicked" />
+                </Label.GestureRecognizers>
+            </Label>
+            <CheckBox x:Name="BGM_C" Color="Aqua" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.025,0.618,0.075,0.035"/>
+            <Label Text="R18音声を含む" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="White" FontSize="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.0775,0.69,0.4,0.06">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnR18Clicked" />
+                </Label.GestureRecognizers>
+            </Label>
+            <CheckBox x:Name="R18_C" Color="Aqua" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.025,0.6875,0.075,0.035"/>
+            <Label Text="パスワードを付与" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="White" FontSize="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.1125,0.76,0.4,0.06">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnPasswordClicked" />
+                </Label.GestureRecognizers>
+            </Label>
+            <CheckBox x:Name="Password_C" Color="Aqua" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.025,0.755,0.075,0.035"/>
+            <Entry x:Name="Password_T" Placeholder="ここに入力" PlaceholderColor="Gray" FontSize="10" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.05,0.84,0.4,0.07"/>
+            <Button x:Name="Upload_B" Text="公開" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Aqua" TextColor="Aqua" FontSize="10" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.832,0.865,0.39,0.065"/>
+            <Label x:Name="Message_T" Text="" TextColor="White" FontSize="13" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.45,1,0.95,0.12" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

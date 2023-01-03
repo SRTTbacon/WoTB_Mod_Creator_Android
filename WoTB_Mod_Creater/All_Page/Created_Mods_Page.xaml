@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WoTB_Mod_Creater.All_Page.Created_Mods_Page"
+             xmlns:ef="clr-namespace:AiForms.Effects;assembly=AiForms.Effects"
+             Title="戻る"
+             BackgroundColor="{StaticResource BackGround}"
+             Appearing="ContentPage_Appearing">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Button x:Name="Select_Type_B" Text="表示:音声Mod" FontSize="16" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Aqua" TextColor="Aqua" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.025,0.625,0.065"/>
+            <Label x:Name="Mod_Count_T" Text="Modリスト:0個" FontSize="16" TextColor="Aqua" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.5,0.125,0.35,0.05"/>
+            <ListView x:Name="Mods_List" BackgroundColor="Transparent" SeparatorColor="White" RowHeight="25" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.25,0.7,0.3" ef:Border.Width="1" ef:Border.Radius="6" ef:Border.Color="Aqua">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Tapped="Mods_List_Tapped">
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout>
+                                    <Label Text="{Binding Name_Text}" TextColor="{Binding Text_Color}" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label x:Name="Mod_Info_T" Text="" FontSize="14.5" TextColor="Aqua" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.5,0.515,1.5,0.05"/>
+            <CheckBox x:Name="Install_C" Color="Aqua" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.180,0.575,0.07,0.03" IsChecked="True"/>
+            <Label Text="ダウンロード後WoTBに適応" FontSize="14" TextColor="Aqua" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="-0.525,0.5825,1.5,0.05"/>
+            <Button x:Name="Download_Install_B" Text="インストール" FontSize="16" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Aqua" TextColor="Aqua" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.675,0.5,0.065"/>
+            <Button x:Name="Delete_B" Text="削除" FontSize="16" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Red" TextColor="Red" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.775,0.5,0.065"/>
+            <Label x:Name="Download_T" Text="" FontSize="14" TextColor="Aqua" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.5,0.8575,0.3,0.05"/>
+            <ProgressBar x:Name="Download_P" ProgressColor="Aqua" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.8825,0.55,0.02"/>
+            <Label x:Name="Message_T" Text="" TextColor="White" FontSize="14" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.45,0.98,1,0.085" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

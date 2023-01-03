@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WoTB_Mod_Creater.All_Page.Home_Page"
+             Title="ホーム"
+             BackgroundColor="{StaticResource BackGround}"
+             Appearing="ContentPage_Appearing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="1">
+            <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Label Text="WoTB_Mod_Creater" FontSize="Title" HorizontalOptions="Center" TextColor="Aqua" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.01,0.7,0.08"/>
+                <Label Text="ご利用いただきありがとうございます!!!" FontSize="14" HorizontalOptions="Center" TextColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.1,0.8,0.08"/>
+                <Button x:Name="Voice_Create_B" Text="音声Modを作成" FontSize="13" BackgroundColor="{StaticResource Primary}" TextColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.18,0.65,0.076"/>
+                <Button x:Name="Other_Sound_B" Text="その他のサウンドMod" FontSize="13" BackgroundColor="{StaticResource Primary}" TextColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.28,0.65,0.075"/>
+                <Button x:Name="Create_Mod_Info_B" Text="作成したModの管理" FontSize="13" BackgroundColor="{StaticResource Primary}" TextColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.38,0.65,0.075"/>
+                <Button x:Name="Music_Player_B" Text="音楽プレイヤー" FontSize="13" BackgroundColor="{StaticResource Primary}" TextColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.48,0.65,0.075"/>
+                <Button x:Name="Mod_Distribution_B" Text="Mod配布" FontSize="13" BackgroundColor="{StaticResource Primary}" TextColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.58,0.65,0.075"/>
+                <Button x:Name="Tools_B" Text="その他ツール" FontSize="13" BackgroundColor="{StaticResource Primary}" TextColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.68,0.65,0.075"/>
+                <Entry x:Name="UserName_T" Placeholder="ユーザー名" PlaceholderColor="Gray" TextColor="White" FontSize="13" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.76,0.55,0.07"/>
+                <Entry x:Name="Password_T" Placeholder="パスワード" PlaceholderColor="Gray" TextColor="White" FontSize="13" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.82,0.55,0.07"/>
+                <Button x:Name="Register_B" Text="登録" FontSize="12" BackgroundColor="{StaticResource Primary}" TextColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.25,0.89,0.3,0.06"/>
+                <Button x:Name="Login_B" Text="ログイン" FontSize="12" BackgroundColor="{StaticResource Primary}" TextColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.7,0.89,0.3,0.06"/>
+                <Label x:Name="Message_T" Text="" FontSize="13" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.975,0.8,0.08"/>
+                <CheckBox x:Name="UseSelectPage_C" IsChecked="True" Color="Aqua" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.2,0.9,0.07,0.03"/>
+                <Label x:Name="UseSelectPage_T" Text="オリジナルのファイル選択画面" FontSize="13" HorizontalOptions="Center" TextColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.55,0.95,0.8,0.08"/>
+            </AbsoluteLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

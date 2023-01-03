@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WoTB_Mod_Creater.All_Page.Mod_Distribution.Mod_Distribution_Page"
+             BackgroundColor="#111216"
+             xmlns:ef="clr-namespace:AiForms.Effects;assembly=AiForms.Effects"
+             Title="戻る"
+             Appearing="ContentPage_Appearing">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Label x:Name="Mod_Creator_T" Text="配布者:" TextColor="Aqua" FontSize="14" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.5,0.02,1,0.05"/>
+            <ListView x:Name="Mod_L" ef:Border.Radius="3" ef:Border.Width="0.5" ef:Border.Color="Aqua" BackgroundColor="Transparent" SeparatorColor="Aqua" RowHeight="25" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.11,0.8,0.375">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Tapped="Mod_List_Tapped">
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout>
+                                    <Label Text="{Binding Name_Text}" TextColor="Aqua"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="Back_B" Text="←" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Aqua" TextColor="Aqua" FontSize="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.125,0.5,0.175,0.065"/>
+            <Label x:Name="R18Mode_T" Text="R18音声:なし" TextColor="Aqua" FontSize="14" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.2,0.49,0.3,0.05"/>
+            <Label x:Name="BGM_T" Text="戦闘BGM:なし" TextColor="Aqua" FontSize="14" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.2,0.54,0.3,0.05"/>
+            <Button x:Name="Download_B" Text="ダウンロード" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Aqua" TextColor="Aqua" FontSize="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.75,0.51,0.35,0.065"/>
+            <Entry x:Name="Password_T" Placeholder="パスワード" PlaceholderColor="Gray" FontSize="13" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.5975,0.55,0.07"/>
+            <ScrollView x:Name="Explanation_Scrool" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.45,0.755,0.7,0.15" ef:Border.Width="1" ef:Border.Radius="3" ef:Border.Color="Aqua">
+                <Label x:Name="Explanation_T" Text="" TextColor="Aqua" FontSize="12" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"/>
+            </ScrollView>
+            <Label x:Name="Download_T" Text="" FontSize="13" TextColor="Aqua" AbsoluteLayout.LayoutFlags="All" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.5,0.795,0.3,0.05"/>
+            <ProgressBar x:Name="Download_P" ProgressColor="Aqua" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.82,0.55,0.02"/>
+            <Button x:Name="Random_Play_B" Text="ランダム再生" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Aqua" TextColor="Aqua" FontSize="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.51,0.3,0.065"/>
+            <Button x:Name="Stop_B" Text="停止" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Aqua" TextColor="Aqua" FontSize="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.95,0.51,0.3,0.065"/>
+            <Button x:Name="Play_B" Text="再生" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Aqua" TextColor="Aqua" FontSize="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.95,0.595,0.3,0.065"/>
+            <Slider x:Name="Sound_Index_S" Maximum="1" ThumbColor="White" MaximumTrackColor="Gray" MinimumTrackColor="Aqua" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.49,0.59,0.385,0.03"/>
+            <Label x:Name="Sound_Index_T" Text="0/0" TextColor="Aqua" FontSize="13" HorizontalOptions="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.635,0.5,0.04"/>
+            <Slider x:Name="Sound_Volume_S" Maximum="100" ThumbColor="White" MaximumTrackColor="Gray" MinimumTrackColor="Aqua" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.975,0.74,0.45,0.03"/>
+            <Label x:Name="Sound_Volume_T" Text="音量:75" TextColor="Aqua" FontSize="13" HorizontalOptions="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="1.025,0.7,0.5,0.04"/>
+            <Button x:Name="Install_B" Text="インストール" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Aqua" TextColor="Aqua" FontSize="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.175,0.735,0.35,0.065"/>
+            <Label x:Name="Message_T" Text="" TextColor="White" FontSize="13" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.45,0.91,0.95,0.12" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Button x:Name="Mod_Change_B" Text="Modを編集" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Aqua" TextColor="Aqua" FontSize="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.2,0.99,0.35,0.065"/>
+            <Button x:Name="Mod_Upload_B" Text="Modを公開" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Aqua" TextColor="Aqua" FontSize="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.775,0.99,0.35,0.065"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

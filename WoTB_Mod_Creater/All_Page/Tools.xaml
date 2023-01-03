@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WoTB_Mod_Creater.All_Page.Tools"
+             Title="戻る"
+             BackgroundColor="#111216">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Label Text="ーDVPLー" FontSize="20" TextColor="Aqua" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.04,0.5,0.1"/>
+            <Button x:Name="DVPL_UnPack_B" Text="DVPL解除" FontSize="15" TextColor="Aqua" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Aqua" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.05,0.125,0.45,0.077"/>
+            <Button x:Name="DVPL_Pack_B" Text="DVPL化" FontSize="15" TextColor="Aqua" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Aqua" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.95,0.125,0.45,0.077"/>
+            <Label Text="ー画像を高画質化ー" FontSize="17" TextColor="Aqua" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.325,0.5,0.1"/>
+            <Button x:Name="Input_Image_B" Text="画像を選択" FontSize="15" TextColor="Aqua" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Aqua" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.4,0.45,0.077"/>
+            <Label Text="今後のアップデートで追加されるかもしれません。" FontSize="15" TextColor="Aqua" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.675,0.825,0.1"/>
+            <Label x:Name="Message_T" Text="" FontSize="13" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.975,0.8,0.1"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
